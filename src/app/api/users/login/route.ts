@@ -46,7 +46,7 @@ export async function POST(req: NextRequest) {
     };
 
     const token = await jwt.sign(tokenData, process.env.TOKEN_SECRET!, {
-      expiresIn: "1h",
+      expiresIn: "1d",
     });
 
     const response = NextResponse.json({
